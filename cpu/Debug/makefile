@@ -26,8 +26,8 @@ endif
 all: cpu
 
 dependents:
-	-cd /home/lucas/git/sistemas/commons/Debug && $(MAKE) clean all
-	-cd /home/lucas/git/sistemas/parser/Debug && $(MAKE) clean all
+	-cd /home/lucas/git/sistemas/commons/Debug && $(MAKE) all
+	-cd /home/lucas/git/sistemas/parser/Debug && $(MAKE) all
 
 # Tool invocations
 cpu: $(OBJS) $(USER_OBJS) /home/lucas/git/sistemas/commons/Debug/libcommons.so /home/lucas/git/sistemas/parser/Debug/libparser.so
