@@ -15,11 +15,11 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <commons/string.c>
-
 typedef struct{
 	int socket;
 	struct sockaddr_in socketInfo;
 }t_cliente;
+
 
 void nuevoCliente(int servidor, t_cliente *clientes, int *nClientes);
 int dameMaximo(t_cliente *tabla, int n);
