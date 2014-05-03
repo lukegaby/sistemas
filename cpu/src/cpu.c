@@ -61,9 +61,9 @@ void *proceso_cpu(){
 	pthread_mutex_lock(&mutex);
 	int nro_cpu=cpus;
 	cpus++;
-	pthread_mutex_unlock(&mutex);
 	pasarachar(s_ip_kernel,&kernel.ip_conectar[0]);
 	pasarachar(s_ip_umv,&umv.ip_conectar[0]);
+	pthread_mutex_unlock(&mutex);
 	kernel.puerto_conectar = i_puerto_kernel;
 	umv.puerto_conectar = i_puerto_umv;
 	printf("KERNEL: %s:%d \nUMV:%s:%d\nEl numero de cpu es : %d \n",kernel.ip_conectar,kernel.puerto_conectar,umv.ip_conectar,umv.puerto_conectar,nro_cpu);
